@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -204,7 +204,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 228046012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1093033130}
@@ -310,8 +310,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017f255442c33441c8e2cfff1eab392e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
-  maxAccel: 10
+  maxSpeed: 15
+  maxAccel: 20
+  maxRotation: 0
+  maxAngularAccel: 0
   orientation: 0
   rotation: 0
   velocity: {x: 0, y: 0, z: 0}
@@ -428,6 +430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   maxAccel: 10
+  maxRotation: 0
+  maxAngularAccel: 0
   orientation: 0
   rotation: 0
   velocity: {x: 0, y: 0, z: 0}
@@ -546,8 +550,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -570,7 +574,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -672,11 +676,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1093033126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017f255442c33441c8e2cfff1eab392e, type: 3}
+  m_Script: {fileID: 11500000, guid: 384f94872ea14554993f21d93397c8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0
-  maxAccel: 0
+  maxSpeed: 25
+  maxAccel: 50
+  maxRotation: 0
+  maxAngularAccel: 0
   orientation: 0
   rotation: 0
   velocity: {x: 0, y: 0, z: 0}
@@ -726,6 +732,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   maxAccel: 10
+  maxRotation: 0
+  maxAngularAccel: 0
   orientation: 0
   rotation: 0
   velocity: {x: 0, y: 0, z: 0}

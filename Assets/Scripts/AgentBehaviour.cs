@@ -7,7 +7,7 @@ public class AgentBehaviour : MonoBehaviour
 {
 	public GameObject target;
 	protected Agent agent;
-
+    
 	public virtual void Awake() {
 		agent = gameObject.GetComponent<Agent>();
 	}
@@ -20,4 +20,18 @@ public class AgentBehaviour : MonoBehaviour
 	{
 		return new Steering();
 	}
+
+    public float MapToRange(float rotaion)
+    {
+        rotaion %= 360.0f;
+        if(Mathf.Abs(rotaion) > 180.0f)
+        {
+            if (rotaion < 0.0f)
+                rotaion += 360.0f;
+            else
+                rotaion -= 360.0f;
+        }
+
+        return rotaion;
+    }
 }
