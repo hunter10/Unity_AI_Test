@@ -55,8 +55,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Agent.cs" />
      <Compile Include="Assets\Scripts\AgentBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Arrive.cs" />
      <Compile Include="Assets\Scripts\Evade.cs" />
      <Compile Include="Assets\Scripts\Flee.cs" />
+     <Compile Include="Assets\Scripts\Leave.cs" />
      <Compile Include="Assets\Scripts\Pursue.cs" />
      <Compile Include="Assets\Scripts\Seek.cs" />
      <Compile Include="Assets\Scripts\Steering.cs" />
