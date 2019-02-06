@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 538305088}
   - component: {fileID: 538305087}
   m_Layer: 0
-  m_Name: p0_p1_mover
+  m_Name: a0_a1_mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,9 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506bb513709f3ba469ecffa65f0aa7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunrise: {fileID: 538305089}
-  sunset: {fileID: 968347694}
-  journeyTime: 1
+  dest: {fileID: 1797103618}
 --- !u!212 &538305088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -533,7 +531,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1639856083}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.24, y: 0, z: -1.67}
+  m_LocalPosition: {x: 1.97, y: 0, z: -1.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -550,7 +548,7 @@ GameObject:
   - component: {fileID: 1797103617}
   - component: {fileID: 1797103616}
   m_Layer: 0
-  m_Name: p1_mover
+  m_Name: a1(p1_p2)mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -562,14 +560,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1797103615}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 506bb513709f3ba469ecffa65f0aa7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunrise: {fileID: 0}
-  sunset: {fileID: 0}
-  journeyTime: 1
+  dest: {fileID: 968347694}
 --- !u!212 &1797103617
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -623,7 +619,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1797103615}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.24, y: 0, z: -1.67}
+  m_LocalPosition: {x: 1.97, y: 0, z: -1.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -826,7 +822,7 @@ GameObject:
   - component: {fileID: 2000659088}
   - component: {fileID: 2000659087}
   m_Layer: 0
-  m_Name: p0_mover
+  m_Name: a0(p0_p1)mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,14 +893,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000659083}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 506bb513709f3ba469ecffa65f0aa7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunrise: {fileID: 0}
-  sunset: {fileID: 0}
-  journeyTime: 1
+  dest: {fileID: 1639856087}
 --- !u!120 &2000659087
 LineRenderer:
   m_ObjectHideFlags: 0

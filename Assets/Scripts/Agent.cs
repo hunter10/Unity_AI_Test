@@ -44,6 +44,7 @@ public class Agent : MonoBehaviour {
 
 	public virtual void LateUpdate()
 	{
+
 		velocity += steering.linear * Time.deltaTime;
 		rotation += steering.angular * Time.deltaTime;
 

@@ -66,6 +66,7 @@ namespace my
 
         public Vector3 GetPosition(float param)
         {
+
             Vector3 position = Vector3.zero;
 
             PathSegment currentSegment = null;

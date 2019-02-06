@@ -5,7 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 public class mover : MonoBehaviour {
 
-    /*
+    
     float speed = 1f;
     public Transform dest;
     bool IsStart = false;
@@ -24,8 +24,9 @@ public class mover : MonoBehaviour {
     {
         return (1f - t) * start + t * dest;
     }
-    */
+    
 
+    /*
     public Transform sunrise;
     public Transform sunset;
     public float journeyTime = 1.0f;
@@ -51,6 +52,7 @@ public class mover : MonoBehaviour {
         Vector3 pos = Vector3.Slerp(riseRelCenter, setRelCenter, fracComplete);
         pos += center;
 
-        transform.DOMove(pos, 0.5f);//.SetEase(Ease.InOutExpo);
+        transform.DOMove(pos, 0.5f);
     }
+    */
 }
