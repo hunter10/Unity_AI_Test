@@ -4,17 +4,42 @@ using UnityEngine;
 
 public class LockonLaserMotion : MonoBehaviour {
 
-    float speed = 1f;
-    public Transform dest;
+    float speed = 0.1f;
+    public Transform guidePrefab; // 인간이 보기위한것
+    Transform dest;
+    Transform movedest;
     bool IsStart = false;
 
     public BoxCollider boxCollider;
+
+
+    private void Start()
+    {
+        dest = GameObject.Find("dest").transform;
+        
+        int a = 0;
+    }
+
+    // 목적지를 생성하기
+    Transform CrateDest()
+    {
+        Transform tr = null;
+
+        // 최종 목적지에서 시작 위치의 벡터에서 일정량만큼 좌우로 벌어진 위치 생성
+        //Vector3 guideline = 
+
+        tr = (Transform)Instantiate(guidePrefab, dest.position, dest.rotation);
+
+        return tr;
+    }
+
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
             IsStart = true;
+            dest = CrateDest();
         }
 
         if (IsStart)
