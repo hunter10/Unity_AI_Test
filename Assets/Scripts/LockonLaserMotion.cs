@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class LockonLaserMotion : MonoBehaviour {
 
-    float speed = 0.1f;
+    public float speed = 0.1f;
     public Transform guidePrefab; // 인간이 보기위한것
     Transform start;
     Transform dest;
@@ -12,13 +13,17 @@ public class LockonLaserMotion : MonoBehaviour {
     bool IsStart = false;
 
     public BoxCollider boxCollider;
-
+    Vector3 moveVec;
 
     private void Start()
     {
         start = GameObject.Find("start").transform;
         dest = GameObject.Find("dest").transform;
-        
+
+        movedest = CrateDest();
+        //movedest.GetComponent<SpriteRenderer>().enabled = false;
+        moveVec = CreateMoveVector();
+
         int a = 0;
     }
 
@@ -34,11 +39,22 @@ public class LockonLaserMotion : MonoBehaviour {
                                     start.position,
                                     start.rotation);
 
-        tr.position = new Vector3(start.position.x + 1, 
+        // 가려는 축 방향으로 좌우로 3
+
+        tr.position = new Vector3(start.position.x + 3, 
                                   start.position.y, 
-                                  start.position.z);
+                                  start.position.z + 2);
         
         return tr;
+    }
+
+    Vector3 CreateMoveVector()
+    {
+        Vector3 vec = Vector3.zero;
+
+        vec = dest.position - transform.position;
+
+        return vec;
     }
 
 
@@ -47,16 +63,17 @@ public class LockonLaserMotion : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.A))
         {
             IsStart = true;
-            movedest = CrateDest();
+            
         }
 
         if (IsStart)
         {
-            //transform.position = Lerp(transform.position, dest.position, speed * Time.deltaTime);
-            
-            transform.Translate(movedest.position * speed * Time.deltaTime, Space.World);
+            // 가상의 목표를 원래 목표로 움직이기
+            movedest.position = Lerp(movedest.position, dest.position, speed * speed * Time.deltaTime);
 
-            //Vector3 v = transform.position - dest.position;
+            // 가상의 목표 방향으로 움직이기
+            moveVec = movedest.position - transform.position;
+            transform.Translate(moveVec * speed * Time.deltaTime, Space.World);
         }
     }
 
